@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 target/
+=======
+/target
+>>>>>>> 83fe680 (Initial Rust port: musical algebra library)
