@@ -3,12 +3,12 @@
 //! Provides HarmonicRing (Z/nZ), PLR group operations, Tropical semiring,
 //! TuningField, and voice-leading combinatorics.
 
-pub mod rings;
+pub mod combinatorics;
 pub mod groups;
+pub mod rings;
 pub mod tropical;
 pub mod tuning;
-pub mod combinatorics;
 
-pub use rings::HarmonicRing;
 pub use groups::PlrGroup;
+pub use rings::HarmonicRing;
 pub use tropical::TropicalSemiring;
