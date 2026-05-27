@@ -1,0 +1,13 @@
+[package]
+name = "flux-algebra"
+version = "0.1.0"
+edition = "2021"
+description = "Algebraic structures for music theory: HarmonicRing, PLR group, Tropical semiring, TuningField"
+license = "MIT"
+keywords = ["music", "algebra", "ring", "tropical", "harmony"]
+categories = ["algorithms", "mathematics", "science"]
+repository = "https://github.com/SuperInstance/flux-algebra-rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0"
