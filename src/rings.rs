@@ -43,12 +43,7 @@ impl HarmonicRing {
         if !self.is_unit(a) {
             return None;
         }
-        for x in 1..self.n {
-            if self.mul(a, x as i32) == 1 {
-                return Some(x);
-            }
-        }
-        None
+        (1..self.n).find(|&x| self.mul(a, x as i32) == 1)
     }
     /// Transpose a pitch class sequence.
     pub fn transpose(&self, notes: &[u32], interval: i32) -> Vec<u32> {
