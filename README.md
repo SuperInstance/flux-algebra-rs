@@ -54,3 +54,5 @@ let freq = tuning.frequency(60); // C4 in just intonation
 
 >>>>>>> 83fe680 (Initial Rust port: musical algebra library)
 MIT
+
+Part of the [SuperInstance OpenConstruct](https://github.com/SuperInstance/OpenConstruct) ecosystem.
