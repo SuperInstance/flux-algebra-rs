@@ -30,7 +30,7 @@ fn test_transpose_roundtrip() {
 #[test]
 fn test_plr_group_act() {
     let c_major = groups::Triad::major(0);
-    let c_minor = groups::PlrGroup::p(c_major.clone());
+    let c_minor = groups::PlrGroup::p(c_major);
     assert_eq!(c_minor.root, 0);
     assert!(!c_minor.major);
 }
@@ -38,7 +38,7 @@ fn test_plr_group_act() {
 #[test]
 fn test_plr_involution() {
     let c = groups::Triad::major(0);
-    let pp = groups::PlrGroup::p(groups::PlrGroup::p(c.clone()));
+    let pp = groups::PlrGroup::p(groups::PlrGroup::p(c));
     assert_eq!(pp.root, c.root);
     assert_eq!(pp.major, c.major);
 }
@@ -47,8 +47,14 @@ fn test_plr_involution() {
 fn test_tropical_semiring_axioms() {
     assert_eq!(tropical::TropicalSemiring::add(3.0, 5.0), 3.0f64.min(5.0));
     assert_eq!(tropical::TropicalSemiring::mul(3.0, 5.0), 3.0 + 5.0);
-    assert_eq!(tropical::TropicalSemiring::add(5.0, tropical::TropicalSemiring::zero()), 5.0);
-    assert_eq!(tropical::TropicalSemiring::mul(5.0, tropical::TropicalSemiring::one()), 5.0);
+    assert_eq!(
+        tropical::TropicalSemiring::add(5.0, tropical::TropicalSemiring::zero()),
+        5.0
+    );
+    assert_eq!(
+        tropical::TropicalSemiring::mul(5.0, tropical::TropicalSemiring::one()),
+        5.0
+    );
 }
 
 #[test]
